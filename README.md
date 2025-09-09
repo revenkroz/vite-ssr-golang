@@ -173,3 +173,13 @@ if (typeof ssr !== 'undefined') {
   })
 }
 ```
+
+## Alternative solutions
+
+### Render server + Go App
+
+Just make requests from Golang application to Node.js/Deno/Bun server and return string with rendered content, then return html-file (or template) with entrypoint-scripts and rendered content.
+
+### Vite + React SSR in one server
+
+To avoid using any frameworks like Next.js or Nuxt just use simple Node.js/Deno/Bun server that renders content using your favorite frontend library. Example: https://github.com/revenkroz/vite-react-ssr-starter
